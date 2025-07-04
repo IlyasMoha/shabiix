@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - SHABIIX</title>
+    <link rel="icon" type="image/x-icon" href="resim/shabiix.png">
+    <!-- Inside the <head> tag of services.html -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="shabix.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- Logo Section -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="resim/logo.jpg" alt="Shabiix Logo" class="logo-img" width="40px"> <!-- Replace 'logo.png' with your logo file -->
+      </a>
+      <span class="logo-text">SHABIIX</span> <!-- Name of the logo -->
+    </div>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    
+      <li class="dropdown">
+        <a href="services.html" class="dropbtn">Services</a>
+        <ul class="dropdown-content">
+          <li><a href="project.html">projects</a></li>
+          <li><a href="vision.html">Vision</a></li>
+          <li><a href="mission.html">Mission</a></li>
+        </ul>
+     </li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <br>
+  <br>
+
+  
+   <section id="index">  
+     <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+           <img src="resim/shabiix_resized.jpg">
+        </div>
+         <!-- 
+
+        <div class="mySlides fade">
+           <img src="resim/civil4.jpg">
+        </div>
+       -->
+ 
+        <div class="mySlides fade">
+            <img src="resim/civil5.jpg">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="resim/civil6.jpg">
+        </div>
+
+
+    
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span> 
+         <!--
+        <span class="dot"></span> 
+        -->
+        <span class="dot"></span> 
+        <span class="dot"></span>
+
+    </div> 
+    
+
+    </section>
+  
+
+  <!-- Footer -->
+<footer class="site-footer">
+   
+
+    <p><h3>Main Office </h3></p>
+      <p>Wadajir District</p>
+       <p>Mogadishu, Somalia.</p>
+        <p>Telephone: + (252) 617662039</p>
+       <p> Email: info@shabiix.com</p>
+</footer>
+
+
+
+</body>
+</html>
+
+<script>
+
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
